@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - PodLux Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">PodLux</div>
+    <nav>
+      <a href="index.backup.html">Voltar à loja</a>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:2rem 1rem;">
+    <h1>Checkout</h1>
+    <p>Revise seu pedido antes de confirmar.</p>
+
+    <ul id="checkout-items" style="margin:1rem 0; list-style: none; padding: 0;"></ul>
+
+    <p class="total">Total: R$ <span id="checkout-total">0.00</span></p>
+
+    <!-- Formulário de entrega -->
+    <form id="shipping-form" style="margin:1rem 0; display:grid; gap:0.5rem; max-width:520px;">
+      <input id="buyer-name" placeholder="Nome completo" required />
+      <input id="buyer-phone" placeholder="Telefone (ex: 11999999999)" required />
+      <input id="buyer-street" placeholder="Rua / Logradouro" required />
+      <div style="display:flex; gap:0.5rem;">
+        <input id="buyer-number" placeholder="Número" required style="flex:0 0 120px;" />
+        <input id="buyer-neighborhood" placeholder="Bairro" required style="flex:1;" />
+      </div>
+      <div style="display:flex; gap:0.5rem;">
+        <input id="buyer-city" placeholder="Cidade" required style="flex:1;" />
+        <input id="buyer-state" placeholder="Estado (UF)" required style="width:80px;" />
+      </div>
+      <input id="buyer-zip" placeholder="CEP (opcional)" />
+      <textarea id="buyer-note" placeholder="Complemento / Observações (opcional)" style="min-height:60px;"></textarea>
+    </form>
+
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <button id="finalize-btn" style="background:#4caf50;color:white;border:none;padding:0.6rem 1rem;border-radius:6px;">Finalizar compra</button>
+      <button id="pay-btn" style="background:var(--primary); color:white; border:none; padding:0.6rem 1rem; border-radius:6px;">Pagar (Cartão)</button>
+      <a href="index.backup.html" style="display:inline-block; padding:0.6rem 1rem; border-radius:6px; background:#eee;">Continuar comprando</a>
+    </div>
+
+    <div id="ready-msg" style="margin-top:0.75rem; color:var(--muted); font-size:0.95rem;"></div>
+
+    <div style="margin-top:0.75rem;">
+      <button id="generate-pix-btn" style="background:#00a86b;color:white;border:none;padding:0.5rem 0.75rem;border-radius:6px;">Gerar pagamento PIX</button>
+      <span style="color:var(--muted); margin-left:0.5rem; font-size:0.95rem;">Ao gerar, você será redirecionado para a página de pagamento com a chave PIX (expira em 30 minutos).</span>
+    </div>    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meus Pedidos - PodLux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">PodLux</div>
+    <nav>
+      <a href="index.backup.html">Voltar à loja</a>
+      <a href="orders.html">Meus Pedidos</a>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:2rem 1rem;">
+    <h1>Meus Pedidos <span id="export-badge" style="background:#1976d2;color:white;border-radius:12px;padding:2px 6px;font-size:0.8rem;margin-left:8px;display:none;">0</span></h1>
+    <p id="no-orders" style="color:var(--muted);">Nenhum pedido encontrado.</p> 
+    <ul id="orders-list" style="list-style:none; padding:0; margin:0;"></ul>
+    <div style="margin-top:1rem; display:flex; gap:0.5rem; align-items:center;">
+      <button id="clear-orders" style="background:#e53935;color:white;border:none;padding:0.5rem 0.75rem;border-radius:6px;">Limpar histórico</button>
+      <button id="export-orders" style="background:#1976d2;color:white;border:none;padding:0.5rem 0.75rem;border-radius:6px;">Exportar JSON</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
